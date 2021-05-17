@@ -1,0 +1,65 @@
+:imagesdir: images
+:stem: latexmath
+:revealjs_theme: simple
+:customcss: style.css
+:icons: font
+:iconfont-remote!:
+:iconfont-name: font-awesome-4.7.0/css/font-awesome
+:source-highlighter: highlightjs
+:highlightjs-theme:  github.css
+:revealjs_width: 1400
+:revealjs_height: 800
+:author: Дащинский Иван
+
+= Apache Ignite Python thin client. Новая версия.
+
+[%notitle]
+== Кто я такой
+
+[cols="30a,70a"]
+|===
+.^|image::me.jpg[]
+.^|
+* Коммитер проекта Apache Ignite
+* ivandasch@apache.org
+* icon:github[] https://github.com/ivandasch[ivandasch]
+* icon:telegram[] https://t.me/ivandasch[ivandasch]
+|===
+
+== Что нового в новой версии
+[%step]
+* Выросла производительность в реальных сценариях
+* Поддержка Partition Awareness
+* Asyncio версия
+* Поддержка cluster api (пока только активация-деактивация)
+
+== Примеры
+include::parts/sync_examples.adoc[]
+
+== Немного о тестовом стенде
+* `16 x Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, 32Gb`
+* `Ubuntu 18.04.3 x86_64`
+* `OpenJDK 1.8.0u282`, `Apache Ignite 2.10.0`, `python 3.8.9`, `uvloop 0.15.2`
+** 4 узла, без бэкапов
+** `-Xmx8G -Xms8G -XX:+UseG1GC`
+** Dataregion -- 18Gb, in-memory
+
+== Оптимизации
+include::parts/optimizations.adoc[]
+
+== Partition awareness
+include::parts/partition_aware.adoc[]
+
+== Asyncio
+include::parts/asyncio.adoc[]
+
+== Планы
+* Expiry policy (TTL) (Уже в master)
+* transactions
+* Connection pools в asyncio версии.
+* Дальнейшие оптимизации в serialization/deserialization (больше кода на С!)
+
+== Ссылки
+* icon:github[] https://github.com/apache/ignite-python-thin-client
+* https://apache-ignite-binary-protocol-client.readthedocs.io/en/stable/readme.html[Документация на readthedocs.io]
+* `pip install pyignite==0.4.0`
