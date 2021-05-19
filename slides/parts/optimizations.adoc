@@ -123,9 +123,9 @@ def benchmark_sync_binary_get(benchmark, cache, size):
 [.text-center]
 image::get_binary_object.png[width=50%]
 
-=== Как это было сделано?
+=== How have this been done?
 [%step]
-* Оптимизация потребления памяти
-** BytesIO
-** memoryview, bytearray
-* Подсчет hashcode переписан на С.
+* Optimization of memory consumption.
+** `BytesIO`
+** `memoryview`, `bytearray`
+* Hashcode of `string`, `bytearray` and `byte` implemented in C

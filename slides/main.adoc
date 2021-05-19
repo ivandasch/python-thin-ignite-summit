@@ -9,42 +9,43 @@
 :highlightjs-theme:  github.css
 :revealjs_width: 1400
 :revealjs_height: 800
-:author: Дащинский Иван
+:author: Daschinsky Ivan
 
-= Apache Ignite Python thin client. Новая версия.
+= Apache Ignite Python thin client. What's new.
 
 [%notitle]
-== Кто я такой
+== About me
 
 [cols="30a,70a"]
 |===
 .^|image::me.jpg[]
 .^|
-* Коммитер проекта Apache Ignite
+* Apache Ignite committer
+* Apache Ignite python thin client maintainer
 * ivandasch@apache.org
 * icon:github[] https://github.com/ivandasch[ivandasch]
 * icon:telegram[] https://t.me/ivandasch[ivandasch]
 |===
 
-== Что нового в новой версии
+== What's new (for those who already know it)
 [%step]
-* Выросла производительность в реальных сценариях
-* Поддержка Partition Awareness
-* Asyncio версия
-* Поддержка cluster api (пока только активация-деактивация)
+* Massive performance improvement.
+* Support of Partition Awareness
+* Support of `asyncio`
+* Support of cluster api (activation-deactivation)
 
-== Примеры
+== How-to use  `pyignite`
 include::parts/sync_examples.adoc[]
 
-== Немного о тестовом стенде
+== Benchmark environment
 * `16 x Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, 32Gb`
 * `Ubuntu 18.04.3 x86_64`
 * `OpenJDK 1.8.0u282`, `Apache Ignite 2.10.0`, `python 3.8.9`, `uvloop 0.15.2`
-** 4 узла, без бэкапов
+** 4 nodes, caches without backups
 ** `-Xmx8G -Xms8G -XX:+UseG1GC`
-** Dataregion -- 18Gb, in-memory
+** In-memory data region size -- 18Gb
 
-== Оптимизации
+== Optimizations
 include::parts/optimizations.adoc[]
 
 == Partition awareness
@@ -53,13 +54,13 @@ include::parts/partition_aware.adoc[]
 == Asyncio
 include::parts/asyncio.adoc[]
 
-== Планы
-* Expiry policy (TTL) (Уже в master)
+== Future plans
+* Expiry policy (TTL) (already merged to `master`)
 * transactions
-* Connection pools в asyncio версии.
-* Дальнейшие оптимизации в serialization/deserialization (больше кода на С!)
+* Connection pools (for `asyncio`).
+* Proceed with optimizing serialization/deserialization (more C code!)
 
 == Ссылки
 * icon:github[] https://github.com/apache/ignite-python-thin-client
-* https://apache-ignite-binary-protocol-client.readthedocs.io/en/stable/readme.html[Документация на readthedocs.io]
+* https://apache-ignite-binary-protocol-client.readthedocs.io/en/stable/readme.html[docs on readthedocs.io]
 * `pip install pyignite==0.4.0`
