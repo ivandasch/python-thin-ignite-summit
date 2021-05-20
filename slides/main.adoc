@@ -60,7 +60,8 @@ include::parts/asyncio.adoc[]
 * Connection pools (for `asyncio`).
 * Proceed with optimizing serialization/deserialization (more C code!)
 
-== Ссылки
+== Links
 * icon:github[] https://github.com/apache/ignite-python-thin-client
 * https://apache-ignite-binary-protocol-client.readthedocs.io/en/stable/readme.html[docs on readthedocs.io]
+* icon:github[] https://github.com/ivandasch/ignite-python-thin-client-benchmark
 * `pip install pyignite==0.4.0`

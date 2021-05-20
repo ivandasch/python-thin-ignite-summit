@@ -1,25 +1,25 @@
-=== Проблемы конкурентности в python
+=== Concurrency in python
 [%step]
 * *GIL* (sic!)
-* Из-за *GIL* многопоточность бессмысленна
-* Выход?
+* Because of *GIL* usefulness of `multithreading` is questionable
+* Solution?
 
-=== Проблемы конкурентности в python
+=== Concurrency in python
 [%step]
-* Помочь может event-loop
-* Это все еще 1 поток
-* Но IO не блокирующее.
+* One of solutions -- event-loop
+* It is still a single thread
+* IO is not blocking, coroutines are suspendable.
 
-=== Проблемы конкурентности в python, asyncio
+=== Concurrency in python, asyncio
 [%step]
-* Есть накладные расходы на исполнение и создание сопрограмм.
-* Но если исполнять конкурентно IO, то можно добиться выигрыша.
+* There is a performance penalty of coroutine execution and creation.
+* But if you run IO-bound tasks in coroutines concurrently, you can improve performance.
 
-=== Отступление перед benchmarks
-* Используем https://uvloop.readthedocs.io[uvloop]
-** Сильно быстрее встроенного event loop
-** Использование бесшовное
-** Вы скорее всего и так его используете:
+=== Few words before benchmarks
+* I use https://uvloop.readthedocs.io[uvloop]
+** It is much more performant than standard asyncio event loop
+** Drop-in replacement of standard event loop
+** You possibly already use it:
 *** https://www.uvicorn.org[uvicorn]
 *** https://sanicframework.org/en/guide[sanic framework]
 
@@ -49,7 +49,7 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 ----
 
-=== Бенчмарки
+=== Benchmarks
 [source, python]
 ----
 bytearray_sizes = [1024, 4096, 10 * 1024, 100 * 1024, 500 * 1024, 1024 * 1024, 10 * 1024 * 1024]
@@ -123,6 +123,6 @@ image::put_binary_object_aio.png[width=50%]
 [.text-center]
 image::put_binary_object_aio_large.png[width=50%]
 
-=== Выводы
-* Partition Aware в asyncio must!
-* Эффект connection pool
+=== Conclusions
+* Partition Aware *must be* enabled with asyncio.
+* Connection pool effects.

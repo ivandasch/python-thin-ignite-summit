@@ -1,5 +1,5 @@
 [%conceal]
-=== Пример
+=== Example
 [source, python]
 ----
 class Student(
@@ -16,7 +16,7 @@ class Student(
 ----
 
 [%conceal]
-=== Пример-2
+=== Example-2
 [source, python]
 ----
 SQL_CONFIG = {
