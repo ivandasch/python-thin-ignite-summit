@@ -27,7 +27,7 @@
 * icon:telegram[] https://t.me/ivandasch[ivandasch]
 |===
 
-== What's new (for those who already know it)
+== What's new.
 [%step]
 * Massive performance improvement.
 * Support of Partition Awareness

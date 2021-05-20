@@ -13,15 +13,7 @@
 === Concurrency in python, asyncio
 [%step]
 * There is a performance penalty of coroutine execution and creation.
-* But if you run IO-bound tasks in coroutines concurrently, you can improve performance.
-
-=== Few words before benchmarks
-* I use https://uvloop.readthedocs.io[uvloop]
-** It is much more performant than standard asyncio event loop
-** Drop-in replacement of standard event loop
-** You possibly already use it:
-*** https://www.uvicorn.org[uvicorn]
-*** https://sanicframework.org/en/guide[sanic framework]
+* But if you run IO-bound tasks in coroutines concurrently you can improve performance.
 
 [%conceal]
 === Example
@@ -48,6 +40,14 @@ loop = asyncio.get_event_loop()
 
 loop.run_until_complete(main())
 ----
+
+=== Few words before benchmark's demonstration.
+* https://uvloop.readthedocs.io[uvloop] was used in benchmarks.
+** It is much more performant than standard asyncio event loop
+** Drop-in replacement of standard event loop
+** You possibly already use it:
+*** https://www.uvicorn.org[uvicorn]
+*** https://sanicframework.org/en/guide[sanic framework]
 
 === Benchmarks
 [source, python]
