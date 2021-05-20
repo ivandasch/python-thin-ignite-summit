@@ -1,7 +1,0 @@
-slides/.java
-slides/.cache
-slides/.asciidoctor
-.idea
-.python-version
-poetry.lock
-examples/.ipynb_checkpoints
