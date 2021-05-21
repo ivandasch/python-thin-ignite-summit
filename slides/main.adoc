@@ -11,7 +11,7 @@
 :revealjs_height: 800
 :author: Daschinsky Ivan
 
-= Apache Ignite Python thin client. What's new.
+= How-to for building high-performance python applications for Apache Ignite.
 
 [%notitle]
 == About me

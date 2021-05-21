@@ -30,19 +30,19 @@ with client.connect([('192.168.0.1', 10800), ...]):
 [%conceal]
 === get bytearray pa vs simple
 [.text-center]
-image::get_bytearray_pa.png[width=50%]
+image::get_bytearray_pa.png[width=60%]
 
 [%conceal]
 === put bytearray pa vs simple
 [.text-center]
-image::put_bytearray_pa.png[width=50%]
+image::put_bytearray_pa.png[width=60%]
 
 [%conceal]
 === get binary object pa vs simple
 [.text-center]
-image::get_binary_object_pa.png[width=50%]
+image::get_binary_object_pa.png[width=60%]
 
 [%conceal]
 === put binary object pa vs simple
 [.text-center]
-image::put_binary_object_pa.png[width=50%]
+image::put_binary_object_pa.png[width=60%]

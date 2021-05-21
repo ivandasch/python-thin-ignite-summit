@@ -86,42 +86,42 @@ def benchmark_async_bytearray_put_batched(benchmark, event_loop, aio_cache, size
 [%conceal]
 === get bytearray
 [.text-center]
-image::get_bytearray_aio.png[width=50%]
+image::get_bytearray_aio.png[width=75%]
 
 [%conceal]
 === get bytearray large
 [.text-center]
-image::get_bytearray_aio_large.png[width=50%]
+image::get_bytearray_aio_large.png[width=75%]
 
 [%conceal]
 === put bytearray
 [.text-center]
-image::put_bytearray_aio.png[width=50%]
+image::put_bytearray_aio.png[width=75%]
 
 [%conceal]
 === put bytearray large
 [.text-center]
-image::put_bytearray_aio_large.png[width=50%]
+image::put_bytearray_aio_large.png[width=75%]
 
 [%conceal]
 === get binary
 [.text-center]
-image::get_binary_object_aio.png[width=50%]
+image::get_binary_object_aio.png[width=75%]
 
 [%conceal]
 === get binary large
 [.text-center]
-image::get_binary_object_aio_large.png[width=50%]
+image::get_binary_object_aio_large.png[width=75%]
 
 [%conceal]
 === put binary
 [.text-center]
-image::put_binary_object_aio.png[width=50%]
+image::put_binary_object_aio.png[width=75%]
 
 [%conceal]
 === put binary large
 [.text-center]
-image::put_binary_object_aio_large.png[width=50%]
+image::put_binary_object_aio_large.png[width=75%]
 
 === Conclusions
 * Partition Aware *must be* enabled with asyncio.

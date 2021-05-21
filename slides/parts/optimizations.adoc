@@ -27,7 +27,7 @@ def benchmark_sync_bytearray_put(benchmark, cache, size):
 [%conceal]
 === put bytearray. 0.3.4 vs 0.4.0
 [.text-center]
-image::put_bytearray.png[width=50%]
+image::put_bytearray.png[width=60%]
 
 [%conceal]
 === Benchmakrs. Get bytearray.
@@ -55,7 +55,7 @@ def benchmark_sync_bytearray_get(benchmark, cache, size):
 [%conceal]
 === get bytearray. 0.3.4 vs 0.4.0
 [.text-center]
-image::get_bytearray.png[width=50%]
+image::get_bytearray.png[width=60%]
 
 [%conceal]
 === Benchmarks. Put BinaryObject.
@@ -92,7 +92,7 @@ def benchmark_sync_binary_put(benchmark, cache, size):
 [%conceal]
 === put BinaryObject. 0.3.4 vs 0.4.0
 [.text-center]
-image::put_binary_object.png[width=50%]
+image::put_binary_object.png[width=60%]
 
 [%conceal]
 === Benchmarks. Get BinaryObject.
@@ -121,7 +121,7 @@ def benchmark_sync_binary_get(benchmark, cache, size):
 [%conceal]
 === get BinaryObject. 0.3.4 vs 0.4.0
 [.text-center]
-image::get_binary_object.png[width=50%]
+image::get_binary_object.png[width=60%]
 
 === How have we achived this?
 [%step]
