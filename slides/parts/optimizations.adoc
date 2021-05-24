@@ -123,7 +123,7 @@ def benchmark_sync_binary_get(benchmark, cache, size):
 [.text-center]
 image::get_binary_object.png[width=60%]
 
-=== How have we achived this?
+=== How have we achieved this?
 [%step]
 * Optimization of memory consumption.
 ** `BytesIO`
