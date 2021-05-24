@@ -6,7 +6,7 @@
 
 === Concurrency in python
 [%step]
-* One of solutions -- event-loop
+* One of the solutions -- event-loop
 * It is still a single thread
 * IO is not blocking, coroutines are suspendable.
 
