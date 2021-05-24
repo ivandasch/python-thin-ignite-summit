@@ -70,3 +70,11 @@ process a lot of request.
 As you can see, partition awareness eliminates not only unnecessary network hops, but utilizes multiple network connections.
 Requests can be done concurrently to many nodes so latency is better than in sync version.
 
+### Plans
+Let's talk about future versions and plans. We are planning to release 0.5.0 soon (in few months). It
+will contain few cool features.
+Expiry Policy (TTL) support is already implemented and merged, I suppose that is one of the most basic functionality
+of every cache. We also planned to implement transactions, connection pools for asyncio version and possibly some
+micro optimizations.
+
+
